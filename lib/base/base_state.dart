@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:widgets_form/widgets/color_loader_3.dart';
 
 abstract class BaseState<T extends StatefulWidget> extends State<T> {
 
@@ -35,17 +34,13 @@ class Dialog {
       barrierDismissible: false,
       context: context,
       builder: (context) => AlertDialog(
-        backgroundColor: Colors.transparent,
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            ColorLoader3(
-              radius: 20.0,
-              dotRadius: 5.0,
-            ),
+            CircularProgressIndicator(),
             Container(
               margin: const EdgeInsets.only(left: 15.0),
-              child: const Text("Procesando", style: TextStyle(color: Colors.white)),
+              child: const Text("Procesando", style: TextStyle(color: Colors.black)),
             )
           ],
         ),
