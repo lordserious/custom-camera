@@ -8,7 +8,7 @@ class TextUrl {
 
   static Future<List<dynamic>> dioGet() async {
     CustomDio dio = new CustomDio();
-    return dio.get("heyapp/listmeetings").then((response) async {
+    return dio.get("api/test").then((response) async {
       switch (response.statusCode) {
         case 200: {
           List<ObjectT> objects = [];
