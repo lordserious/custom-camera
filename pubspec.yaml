@@ -17,6 +17,7 @@ dependencies:
   photo_view: ^0.2.2
   image: ^2.1.4
   path_provider: ^0.5.0
+  dio: ^2.1.13
 
 dev_dependencies:
   flutter_test:
