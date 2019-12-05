@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 // import 'page/test_page.dart';
-import 'page/url_test.dart';
+import 'page/animations.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,7 +10,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: TestPage()
+      home: TestPage(
+      )
     );
   }
 }

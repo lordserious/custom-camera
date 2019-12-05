@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
 import 'package:widgets_form/view_model/test_url.dart';
 
 class TestPage extends StatefulWidget {
@@ -26,8 +27,18 @@ class _TestPageState extends State<TestPage> {
   );
 
   void _launchURL(BuildContext context) async {
-    TextUrl.dioGet().then((response) {
-      print(response[1]);
-    });
+    try {
+      await launch(
+        'http://www.tracklink.pe/mt/sistema/trackfront/Trackfront.aspx',
+        option: new CustomTabsOption(
+          toolbarColor: Theme.of(context).primaryColor,
+          enableDefaultShare: false,
+          enableUrlBarHiding: false,
+          showPageTitle: false,
+        ),
+      );
+    } catch (e) {
+      debugPrint(e.toString());
+    }
   }
 }
